@@ -5,6 +5,7 @@ import pandas as pd
 # update/add code below ...
 #Exercise 1 fibonacci sequence 
 def fib(n):
+    '''Recursive function to return the nth digit in the fibonacci sequence'''
     if n == 0 or n == 1:
         return(n)
     return(fib(n-1) + fib(n - 2))
@@ -31,6 +32,7 @@ def fib_loop(n):
 
 #Exercise 2 binary conversion 
 def to_binary(n):
+    '''Recursive function to convert a number to binary'''
     if n == 0:
     #    print(0)
         return(0)
