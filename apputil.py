@@ -12,7 +12,7 @@ def fibonacci(n):
 
 #One question, what's the upshot of using a recursive function over a more
 #readable loop like this: 
-def fib_loop(n):
+def fib(n):
     for i in range(n+1): 
       if i == 0: 
           old_n1 = 0
