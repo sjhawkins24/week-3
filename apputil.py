@@ -4,7 +4,7 @@ import pandas as pd
 
 # update/add code below ...
 #Exercise 1 fibonacci sequence 
-def fib(n):
+def fibonacci(n):
     '''Recursive function to return the nth digit in the fibonacci sequence'''
     if n == 0 or n == 1:
         return(n)
