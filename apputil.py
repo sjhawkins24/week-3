@@ -76,3 +76,15 @@ def task_3():
     #Group by gender and then get the mean of age
     return_df = df_bellevue.groupby("gender")["age"].mean()
     return(return_df)
+
+def task_4():
+    """Function to return top 5 professions"""
+    #Read in data
+    url = 'https://github.com/melaniewalsh/Intro-Cultural-Analytics/raw/master/book/data/bellevue_almshouse_modified.csv'
+    df_bellevue = pd.read_csv(url)
+    #Group and count data
+    prof_count = df_bellevue.groupby("profession")["profession"].count()
+    prof_count = pd.DataFrame(prof_count).\
+        rename(columns={'profession': 'count'}).\
+            sort_values(by = "count", ascending = False)
+    return(list(prof_count.iloc[0:5, ].reset_index()["profession"]))
